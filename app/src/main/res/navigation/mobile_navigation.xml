@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.hattab.testproject.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_blankFragment"
+            app:destination="@id/blankFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_postFragment"
+            app:destination="@id/postFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.hattab.testproject.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.hattab.testproject.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.hattab.testproject.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" >
+        <argument
+            android:name="fdcgvjh"
+            app:argType="long"
+            android:defaultValue="45L" />
+    </fragment>
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="com.hattab.testproject.PostFragment"
+        android:label="PostFragment" >
+        <argument
+            android:name="message"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.hattab.testproject.ProfileFragment2"
+        android:label="@string/menu_Profile"
+        tools:layout="@layout/fragment_profile2" />
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.hattab.testproject.SearchFragment2"
+        android:label="@string/menu_Search"
+        tools:layout="@layout/fragment_search2" >
+        <action
+            android:id="@+id/action_nav_search_to_postFragment"
+            app:destination="@id/postFragment" />
+    </fragment>
+</navigation>
