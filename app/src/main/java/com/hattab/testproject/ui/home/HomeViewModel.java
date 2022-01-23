@@ -11,6 +11,8 @@ public class HomeViewModel extends ViewModel {
     public HomeViewModel() {
 /// شسيشسيشسيش سي
         //sadasdasdx
+        //asdfaisudfo;a
+
     }
 
     public LiveData<String> getText() {
